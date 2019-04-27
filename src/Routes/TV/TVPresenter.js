@@ -2,8 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const TVPresenter = ({ topRated, popular, airingToday, loading, error }) =>
-  null;
+const TVPresenter = ({ topRated, popular, airingToday, loading, error }) => {
+  console.log(topRated);
+  return null;
+};
 
 TVPresenter.propTypes = {
   topRated: PropTypes.array,
