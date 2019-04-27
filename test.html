@@ -8,15 +8,20 @@
 
     <script>
       let zazi = "";
-      const test = {
+
+      const props = {
         kill: "1",
         death: "3",
-        zerg: { terran: "777" }
+        zerg: { terran: "777", protoss: "5555", hahaha: "1234" }
       };
-      ({
-        zerg: { terran: zazi }
-      } = test);
-      console.log(zazi);
+      const { zerg } = props;
+
+      test(props);
+
+      function test({ kill, death, zerg }) {
+        const { terran } = zerg;
+        return console.log(terran);
+      }
     </script>
   </head>
   <body>
