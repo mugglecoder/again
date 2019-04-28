@@ -18,25 +18,17 @@
 
       test(props);
 
-      const test = ({ zerg }) => (
-         { terran } = zerg
-          console.log(terran);
-      )
+      const test = ({ zerg }) => ({ terran } = zerg);
     </script>
+    <style>
+      span {
+        color: red;
+      }
+    </style>
   </head>
   <body>
     <div class="test">
-      <ul class="ul">
-        <li class="li">
-          <a href="#">1</a>
-        </li>
-        <li>
-          <a href="#">2</a>
-        </li>
-        <li>
-          <a href="#">3</a>
-        </li>
-      </ul>
+      <span style="color:rgba(42, 16, 190, 0.4)">12345555555</span>
     </div>
   </body>
 </html>
