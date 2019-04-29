@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Helmet from "react-helmet";
 import Loader from "Components/Loader";
 import Message from "../../Components/Message";
+import ReactPlayer from "react-player";
 
 const Container = styled.div`
   height: calc(100vh - 50px);
@@ -69,6 +70,14 @@ const Overview = styled.p`
   width: 50%;
 `;
 
+const Youtube = styled.div`
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 320px);
+  grid-gap: 10px;
+  width: 100%;
+`;
+
 const DetailPresenter = ({ result, loading, error }) =>
   loading ? (
     <>
@@ -125,6 +134,22 @@ const DetailPresenter = ({ result, loading, error }) =>
             </Item>
           </ItemContainer>
           <Overview>{result.overview}</Overview>
+          <Youtube>
+            <ReactPlayer
+              url={`https://www.youtube.com/watch?v=${
+                result.videos.results[0].key
+              }`}
+              width="300px"
+              height="200px"
+            />
+            <ReactPlayer
+              url={`https://www.youtube.com/watch?v=${
+                result.videos.results[1].key
+              }`}
+              width="300px"
+              height="200px"
+            />
+          </Youtube>
         </Data>
       </Content>
     </Container>

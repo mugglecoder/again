@@ -4,11 +4,14 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
+    "react-player": "^1.11.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
+    "react-youtube": "^7.9.0",
     "styled-components": "^4.2.0",
     "styled-reset": "^2.0.8"
   },
